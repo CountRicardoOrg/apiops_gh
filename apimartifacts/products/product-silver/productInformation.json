@@ -1,0 +1,9 @@
+{
+  "properties": {
+    "approvalRequired": false,
+    "description": "couple more useful apis than basic",
+    "displayName": "Product - Silver",
+    "state": "notPublished",
+    "subscriptionRequired": true
+  }
+}
