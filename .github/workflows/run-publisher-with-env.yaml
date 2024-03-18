@@ -121,7 +121,6 @@ jobs:
             $publisherFinalFileName = "publisher.exe"
           }
           elseif("${{ runner.os }}" -like "*mac*" && "${{ runner.arch }}" -like "*arm*"){
-            // set default publisher file name for mac arm
             $publisherFileName = "publisher.osx-arm64"
           }
           
