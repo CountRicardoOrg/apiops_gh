@@ -83,8 +83,8 @@ jobs:
           $destinationFilePath = Join-Path "${{ runner.temp }}" $publisherFinalFileName
           Invoke-WebRequest -Uri "$uri" -OutFile "$destinationFilePath"
 
-          Write-Information "RICKRICK File path: $publisherFileName
-          Write-Information "RICKRICK Final File path: $publisherFinalFileName
+          Write-Information "RICKRICK File path: $publisherFileName"
+          Write-Information "RICKRICK Final File path: $publisherFinalFileName"
           Write-Information "RICKRICK Destination file path: $destinationFilePath and env: ${{ inputs.API_MANAGEMENT_ENVIRONMENT }}"
            
           if ("${{ runner.os }}" -like "*linux*")
@@ -177,8 +177,8 @@ jobs:
           $destinationFilePath = Join-Path "${{ runner.temp }}" $publisherFinalFileName
           Invoke-WebRequest -Uri "$uri" -OutFile "$destinationFilePath"
           
-          Write-Information "RICKRICK File path: $publisherFileName
-          Write-Information "RICKRICK Final File path: $publisherFinalFileName
+          Write-Information "RICKRICK File path: $publisherFileName"
+          Write-Information "RICKRICK Final File path: $publisherFinalFileName"
           Write-Information "RICKRICK Destination file path: $destinationFilePath and env: ${{ inputs.API_MANAGEMENT_ENVIRONMENT }}"
 
           if ("${{ runner.os }}" -like "*linux*")
