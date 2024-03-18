@@ -68,7 +68,7 @@ jobs:
           $VerbosePreference = "Continue"
           $InformationPreference = "Continue"
 
-          Write-Information "Downloading publisher..."
+          Write-Information "Downloading publisher RICKCHANGE..."
           $publisherFileName = "publisher.linux-x64"
           $publisherFinalFileName = "publisher"
           if ("${{ runner.os }}" -like "*win*") {
@@ -115,6 +115,7 @@ jobs:
           Write-Information "Downloading publisher..."
           $publisherFileName = "publisher.linux-x64"
           $publisherFinalFileName = "publisher"
+          
           if("${{ runner.os }}" -like "*win*"){
             $publisherFileName = "publisher.win-x64.exe"
             $publisherFinalFileName = "publisher.exe"
