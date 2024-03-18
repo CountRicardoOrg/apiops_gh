@@ -83,6 +83,8 @@ jobs:
           $destinationFilePath = Join-Path "${{ runner.temp }}" $publisherFinalFileName
           Invoke-WebRequest -Uri "$uri" -OutFile "$destinationFilePath"
 
+          Write-Information "RICKRICK File path: $publisherFileName
+          Write-Information "RICKRICK Final File path: $publisherFinalFileName
           Write-Information "RICKRICK Destination file path: $destinationFilePath and env: ${{ inputs.API_MANAGEMENT_ENVIRONMENT }}"
            
           if ("${{ runner.os }}" -like "*linux*")
@@ -174,7 +176,9 @@ jobs:
           $uri = "https://github.com/Azure/apiops/releases/download/${{ env.apiops_release_version }}/$publisherFileName"
           $destinationFilePath = Join-Path "${{ runner.temp }}" $publisherFinalFileName
           Invoke-WebRequest -Uri "$uri" -OutFile "$destinationFilePath"
-
+          
+          Write-Information "RICKRICK File path: $publisherFileName
+          Write-Information "RICKRICK Final File path: $publisherFinalFileName
           Write-Information "RICKRICK Destination file path: $destinationFilePath and env: ${{ inputs.API_MANAGEMENT_ENVIRONMENT }}"
 
           if ("${{ runner.os }}" -like "*linux*")
@@ -187,8 +191,7 @@ jobs:
              Write-Information "RICKRICK exit IF statement"
 
           }
-          Write-Information "RICKRICK run desination file path"
-
+          
           & "$destinationFilePath"              
           if ($LASTEXITCODE -ne 0) { throw "Running publisher failed."}
 
