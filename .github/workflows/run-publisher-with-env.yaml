@@ -175,6 +175,8 @@ jobs:
           $destinationFilePath = Join-Path "${{ runner.temp }}" $publisherFinalFileName
           Invoke-WebRequest -Uri "$uri" -OutFile "$destinationFilePath"
 
+          Write-Information "RICKRICK Destination file path: $destinationFilePath and env: ${{ inputs.API_MANAGEMENT_ENVIRONMENT }}"
+
           if ("${{ runner.os }}" -like "*linux*")
           {
             Write-Information "Setting file permissions..."
