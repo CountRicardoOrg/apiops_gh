@@ -181,8 +181,13 @@ jobs:
           {
             Write-Information "Setting file permissions..."
             & chmod +x "$destinationFilePath"
+            Write-Information "RICKRICK Destination file permissions set"
+
             if ($LASTEXITCODE -ne 0) { throw "Setting file permissions failed."}
+             Write-Information "RICKRICK exit IF statement"
+
           }
+          Write-Information "RICKRICK run desination file path"
 
           & "$destinationFilePath"              
           if ($LASTEXITCODE -ne 0) { throw "Running publisher failed."}
