@@ -68,7 +68,7 @@ jobs:
           $VerbosePreference = "Continue"
           $InformationPreference = "Continue"
 
-          Write-Information "Downloading publisher RICKCHANGE..."
+          Write-Information "Downloading publisher RICKCHANG COMMIT IDE..."
           $publisherFileName = "publisher.linux-x64"
           $publisherFinalFileName = "publisher"
           if ("${{ runner.os }}" -like "*win*") {
@@ -112,7 +112,7 @@ jobs:
           $VerbosePreference = "Continue"
           $InformationPreference = "Continue"
 
-          Write-Information "Downloading publisher..."
+          Write-Information "Downloading publisher RICK CHANGE WITHOUT COMMIT..."
           $publisherFileName = "publisher.linux-x64"
           $publisherFinalFileName = "publisher"
           
