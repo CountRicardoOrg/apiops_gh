@@ -71,6 +71,10 @@ jobs:
           Write-Information "Downloading publisher..."
           $publisherFileName = "publisher.linux-x64"
           $publisherFinalFileName = "publisher"
+
+          Write-Information "RICKRICK runner.os: ${{ runner.os }}"
+          Write-Information "RICKRICK runner.os: ${{ runner.arch }}"
+          
           if ("${{ runner.os }}" -like "*win*") {
             $publisherFileName = "publisher.win-x64.exe"
             $publisherFinalFileName = "publisher.exe"
@@ -165,6 +169,10 @@ jobs:
           Write-Information "Downloading publisher..."
           $publisherFileName = "publisher.linux-x64"
           $publisherFinalFileName = "publisher"
+
+          Write-Information "RICKRICK runner.os: ${{ runner.os }}"
+          Write-Information "RICKRICK runner.os: ${{ runner.arch }}"
+          
           if("${{ runner.os }}" -like "*win*"){
             $publisherFileName = "publisher.win-x64.exe"
             $publisherFinalFileName = "publisher.exe"
