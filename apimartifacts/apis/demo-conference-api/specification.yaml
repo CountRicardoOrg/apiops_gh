@@ -33,7 +33,7 @@ paths:
   '/session/{id}':
     get:
       summary: GetSession
-      description: Retreive a representation of a single session by Id
+      description: Retreive a representation of a single session by Id rick
       operationId: GetSession
       parameters:
         - name: id
