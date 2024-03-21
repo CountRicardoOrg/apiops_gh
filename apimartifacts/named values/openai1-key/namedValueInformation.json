@@ -1,0 +1,7 @@
+{
+  "properties": {
+    "displayName": "openai1-key",
+    "secret": true,
+    "tags": []
+  }
+}

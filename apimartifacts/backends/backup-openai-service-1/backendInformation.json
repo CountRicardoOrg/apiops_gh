@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "credentials": {
+      "header": {
+        "api-key": [
+          "{{openai2-key}}"
+        ]
+      },
+      "query": {}
+    },
+    "description": "the alternative service for OpenAI",
+    "protocol": "http",
+    "tls": {
+      "validateCertificateChain": true,
+      "validateCertificateName": true
+    },
+    "url": "https://rick-openai-service-2.openai.azure.com/openai"
+  }
+}
