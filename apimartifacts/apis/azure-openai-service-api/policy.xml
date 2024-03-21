@@ -20,7 +20,7 @@
                     JArray backends = new JArray();
                     backends.Add(new JObject()
                     {
-                        { "backend-id", "primary-openai-service" },
+                        { "backend-id", "openai-service-sweden" },
                         { "priority", 3},
                         { "isThrottling", false }, 
                         { "retryAfter", DateTime.MinValue } 
@@ -28,7 +28,7 @@
 
                     backends.Add(new JObject()
                     {
-                        { "backend-id", "backup-openai-service-1" },
+                        { "backend-id", "openai-service-westus" },
                         { "priority", 2},
                         { "isThrottling", false },
                         { "retryAfter", DateTime.MinValue }
@@ -36,7 +36,7 @@
 
                     backends.Add(new JObject()
                     {
-                        { "backend-id", "backup-openai-service-2" },
+                        { "backend-id", "openai-service-eastus" },
                         { "priority", 1},
                         { "isThrottling", false },
                         { "retryAfter", DateTime.MinValue }
