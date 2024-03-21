@@ -83,7 +83,7 @@ paths:
                 logprobs:
                   type: integer
                   description: "Include the log probabilities on the logprobs most likely tokens, as well the chosen tokens. For example, if logprobs is 5, the API will return a list of the 5 most likely tokens. The API will always return the logprob of the sampled token, so there may be up to logprobs+1 elements in the response.\nMinimum of 0 and maximum of 5 allowed."
-                  default: 
+                  default: ''
                   nullable: true
                 suffix:
                   type: string
@@ -211,7 +211,7 @@ paths:
                 choices:
                   - index: 0
                     text: The price for bubblegum decreased on thursday.
-                    logprobs: 
+                    logprobs: ''
                     finish_reason: stop
         '400':
           description: Service unavailable
@@ -422,41 +422,29 @@ paths:
             type: string
             description: api version
             example: '2024-02-01'
+        - name: api-key
+          in: header
+          schema:
+            enum:
+              - e370f6c58ede4920bebb650f00ec3bb4
+            type: string
       requestBody:
         content:
           application/json:
             schema:
               $ref: '#/components/schemas/createChatCompletionRequest'
             example:
-              temperature: 1
-              top_p: 1
-              stream: false
-              stop: 
-              max_tokens: 4096
-              presence_penalty: 0
-              frequency_penalty: 0
-              logit_bias: { }
-              user: user-1234
               messages:
                 - role: system
-              data_sources:
-                - type: azure_search
-              n: 1
-              seed: 0
-              response_format:
-                type: text
-              tools:
-                - type: function
-                  function:
-                    description: string
-                    name: string
-                    parameters: { }
-              tool_choice: { }
-              functions:
-                - name: string
-                  description: string
-                  parameters: { }
-              function_call: { }
+                  content: You are an AI assistant that helps people find information.
+                - role: user
+                  content: 'hi, can you tell me what is a good sandwich?'
+              temperature: 0.7
+              top_p: 0.95
+              frequency_penalty: 0
+              presence_penalty: 0
+              max_tokens: 800
+              stop: 
       responses:
         '200':
           description: OK
@@ -673,7 +661,6 @@ paths:
                     - verbose_json
                     - vtt
                   type: string
-                  description: AudioResponseFormat
                 temperature:
                   type: number
                   default: 0
@@ -694,9 +681,7 @@ paths:
               schema:
                 type: string
                 description: 'Transcribed text in the output format (when response_format was one of text, vtt or srt).'
-              examples:
-                default:
-                  value: 
+              example: ''
   '/deployments/{deployment-id}/audio/translations':
     post:
       summary: Transcribes and translates input audio into English text.
@@ -734,7 +719,6 @@ paths:
                     - verbose_json
                     - vtt
                   type: string
-                  description: AudioResponseFormat
                 temperature:
                   type: number
                   default: 0
@@ -753,9 +737,7 @@ paths:
               schema:
                 type: string
                 description: 'Transcribed text in the output format (when response_format was one of text, vtt or srt).'
-              examples:
-                default:
-                  value: 
+              example: ''
   '/deployments/{deployment-id}/images/generations':
     post:
       summary: Generates a batch of images from a text caption on a given DALLE model deployment
@@ -1137,7 +1119,7 @@ components:
                 type: string
               description: Array minimum size of 1 and maximum of 4
           description: Up to 4 sequences where the API will stop generating further tokens.
-          default: 
+          default: ''
         max_tokens:
           type: integer
           description: 'The maximum number of tokens allowed for the generated answer. By default, the number of tokens the model can return will be (4096 - prompt tokens).'
