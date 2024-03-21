@@ -1,9 +1,0 @@
-{
-  "properties": {
-    "approvalRequired": false,
-    "description": "includes the most basic apis, new text added. Rick is now adding more text on the branch",
-    "displayName": "Product - Basic",
-    "state": "notPublished",
-    "subscriptionRequired": true
-  }
-}
