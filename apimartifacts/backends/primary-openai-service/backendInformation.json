@@ -1,0 +1,19 @@
+{
+  "properties": {
+    "credentials": {
+      "header": {
+        "api-key": [
+          "{{openai1-key}}"
+        ]
+      },
+      "query": {}
+    },
+    "description": "primary openai service",
+    "protocol": "http",
+    "tls": {
+      "validateCertificateChain": true,
+      "validateCertificateName": true
+    },
+    "url": "https://rick-open-ai-service.openai.azure.com/openai"
+  }
+}
