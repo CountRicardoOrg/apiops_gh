@@ -5,8 +5,7 @@
     - Copy and paste your code here or simply start coding
 -->
 <fragment>
-    <set-header name="x-request-context-region" exists-action="override">
-        <value>@(context.Deployment?.Region ?? "Unknown")</value>
-        <value>@(context.User?.Id ?? "Unknown")</value>
-    </set-header>
+	<set-header name="x-request-context-region" exists-action="override">
+		<value>@(context.Deployment?.Region ?? "N/A")</value>
+	</set-header>
 </fragment>
