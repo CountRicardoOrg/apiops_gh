@@ -1,0 +1,9 @@
+{
+  "properties": {
+    "approvalRequired": false,
+    "description": "includes all the Basic, Silver plus a special bonus api",
+    "displayName": "Product - Gold",
+    "state": "notPublished",
+    "subscriptionRequired": true
+  }
+}

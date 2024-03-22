@@ -1,0 +1,9 @@
+{
+  "properties": {
+    "approvalRequired": false,
+    "description": "the product we will use for showcasing the upcoming conference",
+    "displayName": "Conferences",
+    "state": "notPublished",
+    "subscriptionRequired": true
+  }
+}
