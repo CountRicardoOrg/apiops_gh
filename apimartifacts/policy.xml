@@ -9,27 +9,9 @@
     - Policies are applied in the order of their appearance, from the top down.
 -->
 <policies>
-	<inbound>
-		<cors allow-credentials="true">
-			<allowed-origins>
-				<origin>https://apiserviceapiservicesqfwabxohnmoa.developer.azure-api.net</origin>
-			</allowed-origins>
-			<allowed-methods>
-				<method>GET</method>
-				<method>POST</method>
-				<method>PUT</method>
-				<method>PATCH</method>
-				<method>DELETE</method>
-			</allowed-methods>
-			<allowed-headers>
-				<header>*</header>
-			</allowed-headers>
-		</cors>
-		<!-- Inbound policies go here -->
-	</inbound>
+	<inbound />
 	<backend>
 		<forward-request />
 	</backend>
 	<outbound />
-	<on-error />
 </policies>
