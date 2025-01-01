@@ -422,12 +422,6 @@ paths:
             type: string
             description: api version
             example: '2024-02-01'
-        - name: api-key
-          in: header
-          schema:
-            enum:
-              - e370f6c58ede4920bebb650f00ec3bb4
-            type: string
       requestBody:
         content:
           application/json:
